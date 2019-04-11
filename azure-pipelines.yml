@@ -22,6 +22,6 @@ jobs:
     CONAN_APPLE_CLANG_VERSIONS: 10.0
   steps:
   - script: |
-    brew update
-    brew install autoconf
+      brew update
+      brew install autoconf
   - template: .ci/azure-pipelines/build.yml
