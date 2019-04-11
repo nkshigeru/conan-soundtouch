@@ -11,6 +11,9 @@ class SoundtouchTestConan(ConanFile):
         cmake = CMake(self)
         # Current dir is "test_package/build/<build_id>" and CMakeLists.txt is
         # in "test_package"
+        if self.settings.os == "Windows":
+            if self.options["soundtouch"].shared:
+                cmake.definitions["SOUNDTOUCHDLL"] = True
         cmake.configure()
         cmake.build()
 

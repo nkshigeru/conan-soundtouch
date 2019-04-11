@@ -1,5 +1,5 @@
 #include <stdio.h>
-#ifdef _WIN32
+#ifdef SOUNDTOUCHDLL
 #include "SoundTouchDLL.h"
 #else
 
