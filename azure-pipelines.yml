@@ -23,5 +23,5 @@ jobs:
   steps:
   - script: |
       brew update
-      brew install autoconf
+      brew install autoconf automake
   - template: .ci/azure-pipelines/build.yml
