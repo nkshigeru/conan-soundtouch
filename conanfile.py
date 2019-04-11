@@ -48,7 +48,6 @@ class SoundtouchConan(ConanFile):
 
     def package(self):
         if self.settings.os == "Windows":
-            #self.copy("soundtouch/include/SoundTouch.h", dst="include", keep_path=False)
             self.copy("source/SoundTouchDLL/SoundTouchDLL.h", dst="include", src=self.source_subfolder, keep_path=False)
             self.copy("*.h", dst="include/soundtouch", src=os.path.join(self.source_subfolder, "include"), keep_path=False)
             self.copy("*.lib", dst="lib", src=os.path.join(self.source_subfolder, "lib"), keep_path=False)
